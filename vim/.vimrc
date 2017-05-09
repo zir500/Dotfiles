@@ -7,11 +7,29 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'scrooloose/syntastic'
+Plugin 'tpope/vim-surround'
+Plugin 'bling/vim-airline'
+Plugin 'valloric/youcompleteme'
+Plugin 'vim-airline/vim-airline-themes'
 
 
 call vundle#end()            " required
 filetype plugin indent on    " required
 "End Vundle
+
+set guifont=Inconsolata\ for\ Powerline:h15
+let g:Powerline_symbols = 'fancy'
+set fillchars+=stl:\ ,stlnc:\
+set term=xterm-256color
+set termencoding=utf-8
+
+set laststatus=2
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
+set t_Co=256
+
+set encoding=utf-8
 
 syntax on
 set wildmode=longest,list,full
