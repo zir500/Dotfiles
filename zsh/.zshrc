@@ -77,3 +77,5 @@ plugins=()
 
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source mingit
+alias git status='nocorrect git status'
+alias git status='nocorrect git log'
