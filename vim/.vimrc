@@ -35,10 +35,23 @@ filetype plugin indent on    " Enable filetype detection
 	set term=xterm-256color
 	set termencoding=utf-8
 
+"Font Settings
+	set guifont=Fira_Code:h11
+
+"Operator Mono Italics
+    hi htmlArg gui=italic
+    hi Comment gui=italic
+    hi Type    gui=italic
+    hi htmlArg cterm=italic
+    hi Comment cterm=italic
+    hi Type    cterm=italic
+
 "Solarized Theme
 	set background=dark
 	colorscheme solarized
 	let g:solarized_termcolors=256
+	let g:solarized_contrast="normal"
+	let g:solarized_visibility="high"
 
 "General Airline setup (Not likely to change much)
 	set ttimeoutlen=50
