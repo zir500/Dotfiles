@@ -32,8 +32,10 @@ filetype plugin indent on    " Enable filetype detection
 
 "Setup for themes & Colours
 	set t_Co=256 
-	set term=xterm-256color
-	set termencoding=utf-8
+	if !has('win32')
+		set term=xterm-256color
+		set termencoding=utf-8
+	endif
 
 "Font Settings
 	set guifont=Fira_Code:h11
@@ -49,13 +51,14 @@ filetype plugin indent on    " Enable filetype detection
 "Solarized Theme
 	set background=dark
 	colorscheme solarized
-	let g:solarized_termcolors=256
+	if !has('win32')
+		let g:solarized_termcolors=256
+	endif	
 	let g:solarized_contrast="normal"
 	let g:solarized_visibility="high"
 
 "General Airline setup (Not likely to change much)
 	set ttimeoutlen=50
-	set guifont=Inconsolata\ for\ Powerline:h15
 	let g:Powerline_symbols = 'fancy'
 	set fillchars+=stl:\ ,stlnc:\
 	set laststatus=2 "Always display the status bar
