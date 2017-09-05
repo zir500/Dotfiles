@@ -10,12 +10,16 @@ call vundle#begin()
 	Plugin 'scrooloose/syntastic'
 	Plugin 'tpope/vim-surround'
 	Plugin 'bling/vim-airline'
-	Plugin 'valloric/youcompleteme'
 	Plugin 'vim-airline/vim-airline-themes'
-	Plugin 'SirVer/ultisnips'
 	Plugin 'honza/vim-snippets'
 	Plugin 'lervag/vimtex'
 	Plugin 'Vitality'
+
+" TODO: Fix python dependancies for these plugins on gVim
+  if !has('win32')
+    Plugin 'valloric/youcompleteme'
+    Plugin 'SirVer/ultisnips'
+  endif
 
 call vundle#end()            " required
 filetype plugin indent on    " Enable filetype detection
@@ -29,6 +33,22 @@ filetype plugin indent on    " Enable filetype detection
 	set mouse=a "Enable mouse control in all modes.
 	set number
 	autocmd BufRead,BufNewFile   *.tex setlocal breakindent
+	set tabstop=2 " 2 tab units per indent
+	set shiftwidth=2
+	set expandtab " Use spaces rather than tab for indent
+  set backspace=indent,eol,start
+
+" Keybinds
+  nmap <F2> :bp <CR>
+  nmap <F3> :bn <CR>
+  nmap <F4> :Explore <CR>
+  nmap <F5> :make <CR>
+
+
+"netrw
+  if has('win32')
+   let g:netrw_sftp_cmd="psftp" "assuming putty directory is in path
+  endif
 
 "Setup for themes & Colours
 	set t_Co=256 
