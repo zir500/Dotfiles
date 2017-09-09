@@ -15,11 +15,9 @@ call vundle#begin()
 	Plugin 'lervag/vimtex'
 	Plugin 'Vitality'
 
-" TODO: Fix python dependancies for these plugins on gVim
-  if !has('win32')
-    Plugin 'valloric/youcompleteme'
-    Plugin 'SirVer/ultisnips'
-  endif
+  Plugin 'valloric/youcompleteme'
+  Plugin 'SirVer/ultisnips'
+  
 
 call vundle#end()            " required
 filetype plugin indent on    " Enable filetype detection
