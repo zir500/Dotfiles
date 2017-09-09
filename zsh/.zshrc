@@ -71,6 +71,7 @@ source $ZSH/oh-my-zsh.sh
 
 alias ls='ls -a'
 alias lsl='ls -al'
+alias vim='/usr/local/bin/vim'
 
 plugins=()
 
