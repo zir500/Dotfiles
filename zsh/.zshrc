@@ -36,7 +36,7 @@ ZSH_THEME="powerlevel9k/powerlevel9k"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions)
+plugins=(git zsh-autosuggestions osx)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -69,14 +69,23 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+
+
 alias ls='ls -a'
 alias lsl='ls -al'
 alias vim='/usr/local/bin/vim'
-
-plugins=()
+alias brew='/usr/local/bin/brew'
+plugins=(
+)
 
 
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source mingit
 alias git status='nocorrect git status'
 alias git status='nocorrect git log'
+
+export PATH="~/.rbenv/shims:/usr/local/bin:$PATH"
+#Load rbenv
+eval "$(rbenv init -)"
+
+source ~/.iterm2_shell_integration.zsh
