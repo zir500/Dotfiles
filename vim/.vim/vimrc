@@ -16,6 +16,8 @@ call vundle#begin()
 	Plugin 'lervag/vimtex'
 	Plugin 'Vitality'
 	Plugin 'tikhomirov/vim-glsl'
+  Plugin 'vim-ruby/vim-ruby'
+  Plugin 'slim-template/vim-slim'
 
 " TODO: Fix python dependancies for these plugins on gVim
   if !has('win32')
@@ -90,8 +92,9 @@ filetype plugin indent on    " Enable filetype detection
 	let g:airline#extensions#tabline#buffer_idx_mode = 1 "Show Buffer nums 
 	let g:airline_powerline_fonts = 1 "Use Powerline Font
 	autocmd BufAdd * call airline#extensions#tabline#buflist#invalidate()
-	"Theme Specific things
-		let g:airline_theme='dark'
+"Theme Specific things
+  let g:airline_theme='dark'
+
 "Syntastic
 	set statusline+=%#warningmsg#
 	set statusline+=%{SyntasticStatuslineFlag()}
@@ -100,7 +103,7 @@ filetype plugin indent on    " Enable filetype detection
  	let g:syntastic_always_populate_loc_list = 1
  	let g:syntastic_auto_loc_list = 0
  	let g:syntastic_check_on_open = 1
-   	let g:syntastic_check_on_wq = 0
+  let g:syntastic_check_on_wq = 0
 	let g:syntastic_auto_jump = 0
 	
 "UltiSnips
@@ -128,7 +131,7 @@ filetype plugin indent on    " Enable filetype detection
  " let g:ycm_filetype_blacklist = {  'tex' : 1} "Disables ycm for .tex files
  " (temporary solution to stop the stupid identifier completion beign there
  " constantly)
- let  g:ycm_min_num_of_chars_for_completion = 2 "Set the number of chars before identifier completion kicks in to something very high, Semantic completion continues as normal.
- let  g:clang_complete_macros = 1
+ let g:ycm_min_num_of_chars_for_completion = 2 "Set the number of chars before identifier completion kicks in to something very high, Semantic completion continues as normal.
+ let g:clang_complete_macros = 1
  let g:ycm_semantic_triggers =  { 'cpp,objcpp' : ['->', '.', '::', 're!gl'] }
 
