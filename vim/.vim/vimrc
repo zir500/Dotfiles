@@ -19,11 +19,9 @@ call vundle#begin()
   Plugin 'vim-ruby/vim-ruby'
   Plugin 'slim-template/vim-slim'
 
-" TODO: Fix python dependancies for these plugins on gVim
-  if !has('win32')
-    Plugin 'valloric/youcompleteme'
-    Plugin 'SirVer/ultisnips'
-  endif
+  Plugin 'valloric/youcompleteme'
+  Plugin 'SirVer/ultisnips'
+  
 
 call vundle#end()            " required
 filetype plugin indent on    " Enable filetype detection
