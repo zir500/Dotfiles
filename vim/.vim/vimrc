@@ -19,6 +19,7 @@ call vundle#begin()
 
   Plugin 'valloric/youcompleteme'
   Plugin 'SirVer/ultisnips'
+  Plugin 'scrooloose/nerdtree'
   
 
 call vundle#end()            " required
@@ -43,7 +44,7 @@ filetype plugin indent on    " Enable filetype detection
 " Keybinds
   nmap <F2> :bp <CR>
   nmap <F3> :bn <CR>
-  nmap <F4> :Explore <CR>
+  nmap <F4> :NERDTreeToggle <CR>
   nmap <F5> :make <CR>
 
 
@@ -51,6 +52,7 @@ filetype plugin indent on    " Enable filetype detection
   if has('win32')
    let g:netrw_sftp_cmd="psftp" "assuming putty directory is in path
   endif
+
 
 "Setup for themes & Colours
 	set t_Co=256 
@@ -90,6 +92,8 @@ filetype plugin indent on    " Enable filetype detection
 	autocmd BufAdd * call airline#extensions#tabline#buflist#invalidate()
 	"Theme Specific things
 		let g:airline_theme='dark'
+
+
 "Syntastic
 	set statusline+=%#warningmsg#
 	set statusline+=%{SyntasticStatuslineFlag()}
@@ -130,3 +134,5 @@ filetype plugin indent on    " Enable filetype detection
  let  g:clang_complete_macros = 1
  let g:ycm_semantic_triggers =  { 'cpp,objcpp' : ['->', '.', '::', 're!gl'] }
 
+"Syntax Highlighting 
+  autocmd! BufNewFile,BufRead *.vsh,*.fsh set ft=glsl " GLSL support for mc shader extensions
