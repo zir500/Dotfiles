@@ -68,8 +68,8 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
-
+#
+ZSH_TMUX_AUTOSTART='true'
 
 alias ls='ls -a'
 alias lsl='ls -al'
