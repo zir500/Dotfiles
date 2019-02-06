@@ -63,6 +63,13 @@ filetype plugin indent on    " Enable filetype detection
 		set termencoding=utf-8
 	endif
 
+" Set Correct term for tmux and change mouse mode
+  if exists("$TMUX")
+    set term=screen-256color
+    set ttymouse=xterm2
+  endif
+  
+
 "Font Settings
 	set guifont=Fira_Code:h11
 
