@@ -19,7 +19,7 @@ call vundle#begin()
   Plugin 'vim-ruby/vim-ruby'
   Plugin 'slim-template/vim-slim'
 
-  Plugin 'valloric/youcompleteme'
+" Plugin 'valloric/youcompleteme'
   Plugin 'SirVer/ultisnips'
   Plugin 'scrooloose/nerdtree'
   Plugin 'bkad/CamelCaseMotion'
@@ -87,12 +87,12 @@ filetype plugin indent on    " Enable filetype detection
 
 "Solarized Theme
 	set background=dark
-	colorscheme modified
 	if !has('win32')
 		let g:solarized_termcolors=256
 	endif
 	let g:solarized_contrast="normal"
 	let g:solarized_visibility="normal"
+	colorscheme modified
 
 "General Airline setup (Not likely to change much)
 	set ttimeoutlen=50
@@ -154,3 +154,4 @@ filetype plugin indent on    " Enable filetype detection
 
 "Enable CamelCaseMotion
   call camelcasemotion#CreateMotionMappings('<leader>')
+
