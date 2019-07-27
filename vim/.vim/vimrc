@@ -19,7 +19,7 @@ call vundle#begin()
   Plugin 'vim-ruby/vim-ruby'
   Plugin 'slim-template/vim-slim'
 
-  Plugin 'valloric/youcompleteme'
+" Plugin 'valloric/youcompleteme'
   Plugin 'SirVer/ultisnips'
   Plugin 'scrooloose/nerdtree'
   Plugin 'bkad/CamelCaseMotion'
@@ -161,3 +161,4 @@ endif
 
 "Enable CamelCaseMotion
   call camelcasemotion#CreateMotionMappings('<leader>')
+
