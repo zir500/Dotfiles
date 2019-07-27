@@ -75,7 +75,7 @@ filetype plugin indent on    " Enable filetype detection
   
 
 "Font Settings
-	set guifont=Fira_Code:h11
+	set guifont=Fira_Code:h12
 
 "Operator Mono Italics
     hi htmlArg gui=italic
@@ -85,14 +85,22 @@ filetype plugin indent on    " Enable filetype detection
     hi Comment cterm=italic
     hi Type    cterm=italic
 
+
+set termguicolors
+set background=light
+colorscheme xcode
+
 "Solarized Theme
-	set background=dark
+if exists('use_solarized') && use_solarized
 	colorscheme modified
+	set background=dark
 	if !has('win32')
 		let g:solarized_termcolors=256
 	endif
 	let g:solarized_contrast="normal"
 	let g:solarized_visibility="normal"
+  let g:airline_theme='dark'
+endif
 
 "General Airline setup (Not likely to change much)
 	set ttimeoutlen=50
@@ -104,7 +112,6 @@ filetype plugin indent on    " Enable filetype detection
 	let g:airline_powerline_fonts = 1 "Use Powerline Font
 	autocmd BufAdd * call airline#extensions#tabline#buflist#invalidate()
 "Theme Specific things
-  let g:airline_theme='dark'
 
 "Syntastic
 	set statusline+=%#warningmsg#
