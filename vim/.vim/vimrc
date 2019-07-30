@@ -69,7 +69,7 @@ filetype plugin indent on    " Enable filetype detection
 
 " Set Correct term for tmux and change mouse mode
   if exists("$TMUX")
-    set term=screen-256color
+    "set term=xterm-256color
     set ttymouse=xterm2
   endif
   
