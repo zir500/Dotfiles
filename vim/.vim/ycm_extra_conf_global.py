@@ -1,4 +1,4 @@
 def FlagsForFile(filename, **kwargs ):
   return {
-    'flags': ['-Wall'],
+    'flags': ['-Wall --std=c++17'],
   }
