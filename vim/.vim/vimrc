@@ -7,17 +7,12 @@ call vundle#begin()
 
 	Plugin 'VundleVim/Vundle.vim'
 	Plugin 'christoomey/vim-tmux-navigator'
-	Plugin 'scrooloose/syntastic'
+	Plugin 'scrooloose/syntastic '
 	Plugin 'tpope/vim-surround'
 	Plugin 'bling/vim-airline'
-	Plugin 'rdnetto/YCM-Generator'
 	Plugin 'vim-airline/vim-airline-themes'
 	Plugin 'honza/vim-snippets'
-	Plugin 'lervag/vimtex'
 	Plugin 'Vitality'
-	Plugin 'tikhomirov/vim-glsl'
-  Plugin 'vim-ruby/vim-ruby'
-  Plugin 'slim-template/vim-slim'
 
 " Plugin 'valloric/youcompleteme'
   Plugin 'SirVer/ultisnips'
