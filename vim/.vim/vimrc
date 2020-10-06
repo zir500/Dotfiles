@@ -71,34 +71,9 @@ filetype plugin indent on    " Enable filetype detection
     set ttymouse=xterm2
   endif
   
-
-"Font Settings
-	set guifont=Fira_Code:h12
-
-"Operator Mono Italics
-    hi htmlArg gui=italic
-    hi Comment gui=italic
-    hi Type    gui=italic
-    hi htmlArg cterm=italic
-    hi Comment cterm=italic
-    hi Type    cterm=italic
-
-
-set termguicolors
-set background=light
-colorscheme xcode
-
-"Solarized Theme
-if exists('use_solarized') && use_solarized
-	colorscheme modified
-	set background=dark
-	if !has('win32')
-		let g:solarized_termcolors=256
-	endif
-	let g:solarized_contrast="normal"
-	let g:solarized_visibility="normal"
-  let g:airline_theme='dark'
-endif
+" Colourscheme
+  colorscheme gruvbox
+  set background=dark
 
 "General Airline setup (Not likely to change much)
 	set ttimeoutlen=50
@@ -109,7 +84,6 @@ endif
 	let g:airline#extensions#tabline#buffer_idx_mode = 1 "Show Buffer nums 
 	let g:airline_powerline_fonts = 1 "Use Powerline Font
 	autocmd BufAdd * call airline#extensions#tabline#buflist#invalidate()
-"Theme Specific things
 
 "Syntastic
 	set statusline+=%#warningmsg#
