@@ -20,6 +20,8 @@ call vundle#begin()
   Plugin 'SirVer/ultisnips'
   Plugin 'scrooloose/nerdtree'
   Plugin 'bkad/CamelCaseMotion'
+
+  Plugin 'vimwiki/vimwiki'
   
 
 call vundle#end()            " required
@@ -151,3 +153,5 @@ if IsWindowsTerminal
   autocmd VimLeave * silent !echo -ne "\e[6 q"
 endif
 
+" Vim Wiki config
+let g:vimwiki_list =[{'path': '~/Nextcloud/wiki'}]
